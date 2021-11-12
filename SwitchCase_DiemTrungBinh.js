@@ -1,4 +1,4 @@
-let avg = prompt("Nhập điểm trung bình để tính học lực :", 0);
+let avg = 10;
         let avgType = "";
         let kind = "";
         let isXS = isGioi = isKha = isTBK = isTB = isYeu = false;
@@ -18,25 +18,25 @@ let avg = prompt("Nhập điểm trung bình để tính học lực :", 0);
 
         switch(avgType){
             case('isXS'):
-                kind = "XS";
+                kind = "Xuất sắc";
                 break;
             case('isGioi'):
-                kind = "Gioi";
+                kind = "Giỏi";
                 break;
             case('isKha'):
-                kind = "Kha";
+                kind = "Khá";
                 break;
             case('isTBK'):
-                kind = "TBK";
+                kind = "Trung bình khá";
                 break;
             case('isTB'):
-                kind = "TB";
+                kind = "Trung bình";
                 break;
             case('isYeu'):
-                kind = "Yeu";
+                kind = "Yếu";
                 break;
 
             default:
-                kind = "Diem nhap vao khong hop le";
+                kind = "Điểm không hợp lệ";
         }
         console.log(kind);

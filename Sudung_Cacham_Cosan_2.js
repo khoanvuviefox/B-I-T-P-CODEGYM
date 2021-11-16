@@ -14,3 +14,4 @@ for(let x=1; x<str.length; x++)
      }
   }
 console.log(result.join(''));
+//[Bài tập] Sử dụng các hàm có sẵn của mảng

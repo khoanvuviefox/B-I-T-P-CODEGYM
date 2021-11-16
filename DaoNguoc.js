@@ -7,5 +7,5 @@ while (first < last) {
     x[last] = b;
     first++;
     last--;
-}
+ }
 document.write(x);

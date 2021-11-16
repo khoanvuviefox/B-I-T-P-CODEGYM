@@ -19,3 +19,4 @@ var result = [];
     }
   }
 console.log(result.join(''));
+// [Bài tập] Sử dụng các hàm có sẵn của mảng

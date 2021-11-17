@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="vn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
 </head>
+
 <body>
     <script>
-        function checkPrimeNumbers(n) {
-            if (n < 2){
+        function soLuongNguyenTo(n) {
+            if (n < 2) {
                 return false;
             }
-            else if (n == 2){
+            else if (n == 2) {
                 return true;
             }
-            else if (n % 2 == 0){
+            else if (n % 2 == 0) {
                 return false;
             }
-            else { 
-                for (var i = 3; i < Math.sqrt(n); i+=2)
-                {
-                    if (n % i == 0){
+            else {
+                for (var i = 3; i < n-1; i += 2) {
+                    if (n % i == 0) {
                         return false;
                         break;
                     }
@@ -29,18 +30,19 @@
             }
             return true
         }
-        var n = prompt("Nhập số nguyên tố đầu tiên bạn muốn in ra",'');
+        var n = prompt("Nhập số lượng số nguyên tố đầu tiên:", '');
         var count = 0;
         var number = 2;
         var result = "";
-        while ( count < n) {
-            if (checkPrimeNumbers(number)) {
-                count +=1;
-                result = result + `<span>${number} ;</span>`
-            } 
-            number+=1;
+        while (count < n) {
+            if (soLuongNguyenTo(number)) {
+                count += 1;
+                result = result + `${number} ;`
+            }
+            number += 1;
         }
         document.write(result);
     </script>
 </body>
+
 </html>

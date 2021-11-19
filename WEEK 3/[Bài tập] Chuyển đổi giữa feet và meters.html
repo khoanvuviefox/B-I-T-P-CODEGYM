@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<label>input</label>
+<label>input</label>
+<input id="doi" type="number">
+<p>resul: <span id="max"></span></p>
+<input type="button" value="feet to meters" onclick="foot()">
+<input type="button" value="meters to feet" onclick="mets()">
+<script>
+    function foot(foot) {
+        var met;
+        me = parseFloat(document.getElementById("doi").value);
+        met = 0.297 * foot;
+        document.getElementById("max").innerHTML = met;
+    }
+    function mets(met) {
+        var foot;
+        fo = parseFloat(document.getElementById("doi").value);
+        foot = 3.279 * met;
+        document.getElementById("max").innerHTML = foot
+    }
+</script>
+</body>
+</html>

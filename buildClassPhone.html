@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone</title>
+</head>
+<body>
+
+
+<script>
+    var Moblie = function (battery, memoryArea1, memoryArea2, memoryArea3) {
+        this.battery = battery;
+        this.memoryArea1 = memoryArea1;
+        this.memoryArea2 = memoryArea2;
+        this.memoryArea3 = memoryArea3;
+
+        this.checkStatusOnOff = function () {
+
+            if (this.battery > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        this.turnOn = function () {
+            alert("Xin chào! Điện thoại của bạn đã được bật.");
+        };
+
+        this.turnOf = function () {
+            alert("Tạm biệt! Điện thoại của bạn đã được tắt.");
+        };
+
+        this.charge = function () {
+            alert("Đã kết nối nguồn điện." + this.battery++);
+        };
+
+        this.writeMessenger = function () {
+            prompt("Mời bạn viết tin nhắn:");
+        };
+
+        this.massengerL = function () {
+            alert("Tin nhắn đã được gửi đi");
+
+        };
+        this.afterUse = function () {
+            alert("Bạn còn :" + this.battery-- + "% pin! Kết nối bộ sạc của bạn.");
+        }
+
+    };
+    var mobile = new Moblie(10, 100, 100, 100);
+
+    function main() {
+        mobile.turnOf();
+    }
+
+    function main1() {
+        mobile.turnOn();
+    }
+
+    function main2() {
+        mobile.charge();
+    }
+
+    function main3() {
+        mobile.writeMessenger();
+    }
+
+    function main4() {
+        mobile.massengerL();
+    }
+
+    function main5() {
+        mobile.afterUse();
+
+    }
+</script>
+<font style="margin-left: 280px; color: #ff0000;" > <b>VIEFOX PHONE</b> </font>
+<table border="1">
+
+    <th><button type="button" onclick="main()" style=" cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> PHONE ON
+    </button></th>
+
+    <th><button type="button" onclick="main1()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> PHONE OFF
+    </button></th>
+
+    <th><button type="button" onclick="main2()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> CHARGE
+    </button></th>
+
+    <th><button type="button" onclick="main3()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> MESSAGE
+    </button></th>
+
+    <th><button type="button" onclick="main4()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> MESSAGE NOTIFICATIONS
+    </button></th>
+
+    <th><button type="button" onclick="main5()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> USE
+    </button></th>
+
+</table>
+
+</body>
+</html>
